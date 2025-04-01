@@ -2,50 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Synapse 25 – AI for the World</title>
+  <title>Synapse 25 – AI For the World</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #0d0d0d;
       color: #f2f2f2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       text-align: center;
-      padding: 0 20px;
+      line-height: 1.6;
     }
     header {
-      padding: 60px 0 20px;
+      padding: 80px 20px 40px;
+      background: linear-gradient(135deg, #00ffe1, #004aad);
     }
     h1 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 3em;
-      color: #00ffe1;
+      font-size: 3.5em;
       margin: 0;
+      color: #000;
     }
-    p.subtitle {
-      font-size: 1.2em;
-      color: #cccccc;
-      margin-top: 10px;
+    .subtitle {
+      font-size: 1.4em;
+      color: #222;
     }
-    .hero-image {
-      max-width: 100%;
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .hero-image,
+    .section-image {
+      width: 100%;
+      max-width: 1000px;
       border-radius: 12px;
-      margin: 40px 0;
+      margin: 30px 0;
       box-shadow: 0 0 20px rgba(0, 255, 225, 0.2);
     }
-    section {
-      max-width: 800px;
-      margin: 40px 0;
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffe1;
     }
     .cta {
       background-color: #00ffe1;
       color: #000;
-      padding: 14px 30px;
+      padding: 16px 36px;
+      font-size: 1.2em;
       border: none;
-      font-size: 1.1em;
       border-radius: 8px;
       cursor: pointer;
       margin-top: 30px;
@@ -55,9 +64,44 @@
       background-color: #00ccb7;
     }
     footer {
-      margin: 60px 0 20px;
+      padding: 30px 20px;
       font-size: 0.9em;
       color: #666;
+    }
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      width: 260px;
+      text-align: left;
+      box-shadow: 0 0 10px rgba(0,255,225,0.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 10px 0 5px;
+      color: #00ffe1;
+    }
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5em;
+      }
+      h2 {
+        font-size: 1.6em;
+      }
+      .card {
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -68,18 +112,53 @@
     <p class="subtitle">Where the future of AI takes shape</p>
   </header>
 
-  <img src="https://source.unsplash.com/1600x600/?ai,technology" alt="Futuristic AI" class="hero-image">
-
-  <section>
+  <div class="section">
+    <img src="https://source.unsplash.com/1600x600/?ai,technology" alt="AI Banner" class="hero-image">
     <p>
-      Synapse 25 brings together the brightest minds in artificial intelligence, machine learning, and human-AI collaboration. 
-      Discover groundbreaking research, connect with global innovators, and experience what’s next in AI.
+      Synapse 25 is the premier AI conference of the year, uniting visionaries, technologists, and industry leaders to explore the next frontier of artificial intelligence.
+      Dive into breakthrough research, hear from pioneers in machine learning, and experience the synergy between humans and intelligent systems.
     </p>
+    <button class="cta">Register Now</button>
+  </div>
 
-    <button class="cta">Join Us →</button>
-  </section>
+  <div class="section">
+    <h2>Featured Speakers</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?portrait,tech" alt="Speaker 1">
+        <h3>Dr. Lena Ortiz</h3>
+        <p>AI Ethics Researcher at DeepMind</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/301x200/?portrait,ai" alt="Speaker 2">
+        <h3>Marcus Jang</h3>
+        <p>Founder, Cognition Labs</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/302x200/?portrait,futuristic" alt="Speaker 3">
+        <h3>Eliza Wong</h3>
+        <p>Neuroscience & AI at MIT</p>
+      </div>
+    </div>
+  </div>
 
-  <img src="https://source.unsplash.com/1200x400/?machine-learning,futuristic" alt="AI Tech" class="hero-image">
+  <div class="section">
+    <h2>Conference Highlights</h2>
+    <img src="https://source.unsplash.com/1000x400/?machine-learning,futuristic" alt="Tech Image" class="section-image">
+    <ul style="text-align:left; max-width: 800px; margin: 20px auto 0; list-style: square;">
+      <li>Keynotes from AI pioneers</li>
+      <li>Live demos of cutting-edge technology</li>
+      <li>Workshops on ethical AI & governance</li>
+      <li>Startup pitch competition</li>
+      <li>Networking with top minds in tech</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Venue</h2>
+    <p>The conference will be held at the iconic Moscone Center, San Francisco – April 7–11, 2025.</p>
+    <img src="https://source.unsplash.com/1000x400/?conference,stage" alt="Venue Image" class="section-image">
+  </div>
 
   <footer>
     © 2025 Synapse Conference. All rights reserved.
